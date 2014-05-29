@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+</head>
+<script>
+    window.addEventListener("load", function () {
+        var p = document.getElementById("p");
+        var n = document.getElementById("np");
+        var c = document.getElementById("c").getContext("2d");
+        c.drawImage(p, 0, 0);
+        c.globalCompositeOperation = "difference";
+        c.drawImage(n, 0, 0);
+    }); 
+</script>
+<body>
+    <img id="p" src="profile.png">
+    <img id="np" src="no-profile.png">
+<canvas id="c" width="1712" height="569"></canvas>
+</body>
+</html>
